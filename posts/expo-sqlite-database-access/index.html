@@ -1,146 +1,63 @@
-<!-- This website has been built with 💖 and 🍕 on 🌍 using Salinger Theme for Hugo framework. The theme has been released with MIT licence and can be found at https://github.com/jacksalici/salinger-theme. -->
 <!DOCTYPE html>
-<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  
-    <meta name="keywords" content="Expo44React Native44SQLite"/>
-  <meta name="robots" content="index, follow" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="author" content="" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Accessing your Expo-SQLite Database File on iOS and Android - David Barth</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Learn how to locate and access your Expo-SQLite database file on both iOS and Android simulators." />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://davidbarth.dev/posts/expo-sqlite-database-access/">
+  <meta property="og:site_name" content="David Barth">
+  <meta property="og:title" content="Accessing your Expo-SQLite Database File on iOS and Android">
+  <meta property="og:description" content="Learn how to locate and access your Expo-SQLite database file on both iOS and Android simulators.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-02-17T11:47:47+02:00">
+    <meta property="article:modified_time" content="2024-02-17T11:47:47+02:00">
+    <meta property="article:tag" content="Expo">
+    <meta property="article:tag" content="React Native">
+    <meta property="article:tag" content="SQLite">
 
-  <meta http-equiv="Content-Security-Policy" content="default-src *;
-   img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
-   style-src  'self' 'unsafe-inline' *">
-   
-  
-  <link rel="shortcut icon" href="http://localhost:1313/logo.svg" />
-  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Accessing your Expo-SQLite Database File on iOS and Android">
+  <meta name="twitter:description" content="Learn how to locate and access your Expo-SQLite database file on both iOS and Android simulators.">
 
-  
-  
+        <link href="https://davidbarth.dev/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
 
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet"
-  />
-
-     
-  <link href="/css/styles.css" rel="stylesheet" />
-
-  
-  <link
-    rel="preload"
-    as="style"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-    onload="this.onload=null;this.rel='stylesheet'"
-  />
-
-  
-  
-
-  
-
-  
-
-  <scripts defer
-    src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"
-  ></script>
-
-  
-  <title>
-    Accessing your Expo-SQLite Database File on iOS and Android ~
-    David Barth
-  </title>
-
-  <script>
-  changeTheme()
-
-  function changeTheme(){
-    if (localStorage.theme === 'dim' || ((localStorage.theme === 'auto' || !('theme' in localStorage)) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
-  }
-
-  </script>
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://davidbarth.dev/css/main.31c9695e5e3c53fe51fe512f6c4a99098d3e74f72c4e86f92681de26e6736296.css" />
+		
+		
+		<link rel="stylesheet" type="text/css" href="https://davidbarth.dev/css/main.31c9695e5e3c53fe51fe512f6c4a99098d3e74f72c4e86f92681de26e6736296.css">
+		
+		
+		<link rel="stylesheet" type="text/css" href="https://davidbarth.dev/css/dark.b3371c17afdb775f3cc5547197aa27794308c2fcf3f8a1027de6c5f13378adee.css">
+		
 </head>
-<body class="flex flex-col h-screen justify-between" tabindex="0"><div class="mb-auto"> 
-   
-    
-<div class=" bg-base-200  mb-7  place-items-start">
-    <div class="feed w-full py-24">
-      <div class="  space-y-3 ">
-        
-        
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://davidbarth.dev/">David Barth</a>
+	</div>
+	<nav>
+		
+		
+	</nav>
+</header>
 
-        <h1 class="  text-4xl  font-bold font-serif">
-             Accessing your Expo-SQLite Database File on iOS and Android 
-        </h1>
-        
-        <p class="font-mono balanced  text-lg    uppercase">Learn how to locate and access your Expo-SQLite database file on both iOS simulators and Android emulators for debugging and data analysis.</p>
-        
-        
-
-        
-        <div class="text-xs pt-2">
-  
-  
-  
-  <svg class="icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M596.817-220Q556-220 528-248.183q-28-28.183-28-69T528.183-386q28.183-28 69-28T666-385.817q28 28.183 28 69T665.817-248q-28.183 28-69 28ZM180-80q-24 0-42-18t-18-42v-620q0-24 18-42t42-18h65v-28q0-13.6 9.2-22.8 9.2-9.2 22.8-9.2 14.025 0 23.513 9.2Q310-861.6 310-848v28h340v-28q0-13.6 9.2-22.8 9.2-9.2 22.8-9.2 14.025 0 23.513 9.2Q715-861.6 715-848v28h65q24 0 42 18t18 42v620q0 24-18 42t-42 18H180Zm0-60h600v-430H180v430Zm0-490h600v-130H180v130Zm0 0v-130 130Z"/></svg>
-      Published on
-    February 17, 2024.
-
-
+<main>
+  <article>
+    <div class="post-container">
       
-  
-
-  <br/>
-
-  
-  <svg class="icon w-4 h-4" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M140-160q-23 0-41.5-18.5T80-220v-520q0-23 18.5-41.5T140-800h256q12.444 0 23.722 5t19.366 13.088L481-740h339q23 0 41.5 18.5T880-680H455l-60-60H140v520l90-355q5-20 21.826-32.5T289-620h574q29 0 47.5 23t10.5 52l-88 339q-6 24-22 35t-41 11H140Zm63-60h572l84-340H287l-84 340Zm-63-353v-167 167Zm63 353 84-340-84 340Z"/></svg>
-  Built
-  
-    under 
-    
-       <a href="/categories/mobile-development" class="link">Mobile Development</a> 
-   
-  
-  
-  .
-  
-  
-
-  
-
-
-  
-</div>
-
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">Accessing your Expo-SQLite Database File on iOS and Android</h1>
+          <div class="meta">Posted on Feb 17, 2024</div>
+        </div>
         
-        
-        
-
-      </div>
-    </div>
-</div>
-
-
-
-   
-
-  
-
-  <article class="prose text-justify feed"><h1 id="how-to-access-your-expo-sqlite-database-file">How to access your Expo-SQLite database file</h1>
-<p>When interacting with an Expo-SQLite database, the first thing you need to do is to <a href="https://docs.expo.dev/versions/latest/sdk/sqlite/#sqliteopendatabaseasyncdatabasename-options">open a database connection</a>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#cba6f7">const</span> db <span style="color:#89dceb;font-weight:bold">=</span> <span style="color:#cba6f7">await</span> SQLite.openDatabaseAsync(<span style="color:#a6e3a1">&#39;sqlite.db&#39;</span>);
+        <section class="body">
+          <p>When interacting with an Expo-SQLite database, the first thing you need to do is to <a href="https://docs.expo.dev/versions/latest/sdk/sqlite/#sqliteopendatabaseasyncdatabasename-options">open a database connection</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#7fbaf5">const</span> db <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">await</span> SQLite<span style="color:#56b6c2">.</span>openDatabaseAsync<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;sqlite.db&#39;</span><span style="color:#56b6c2">);</span>
 </span></span></code></pre></div><p>The string you pass as an an argument is the name of the database file.</p>
 <p>Here is how to locate and access that file on both iOS and Android.</p>
 <blockquote>
@@ -149,40 +66,60 @@
 <h2 id="ios">iOS</h2>
 <p>iOS simulators store their data in a regular directory on on your mac.
 Knowing the database name and the location of your simulators, it is now easy to find the actual database file:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find ~/Library/Developer/CoreSimulator/Devices -name &lt;database-name&gt; -print
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find ~/Library/Developer/CoreSimulator/Devices -name &lt;database-name&gt; -print
 </span></span></code></pre></div><p>Of course you can now plug this into your sqlite cli:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sqlite3 <span style="color:#cba6f7">$(</span>find ~/Library/Developer/CoreSimulator/Devices -name &lt;database-name&gt;<span style="color:#cba6f7">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sqlite3 <span style="color:#7fbaf5">$(</span>find ~/Library/Developer/CoreSimulator/Devices -name &lt;database-name&gt;<span style="color:#7fbaf5">)</span>
 </span></span></code></pre></div><h2 id="android">Android</h2>
 <p>Make sure the Android simulator is running for this section.</p>
 <h3 id="cli">CLI</h3>
 <p>Android&rsquo;s simulator files have their own representation that is not directly browsable from the main file system. Luckily, Google provides us with the <a href="https://developer.android.com/tools/adb">Android Debug Bridge</a> as part of the Android SDK.
 <code>adb shell</code> allows direct access to the simulated device and therefore the files on it. However, you don&rsquo;t have permissions to access application data by default. To do so simply pass <code>run-as</code> with your application&rsquo;s name. Launch the simulator and run</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell run-as &lt;com.yourpackage.name&gt; ls /data/data/&lt;com.yourpackage.name&gt;/files/SQLite
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell run-as &lt;com.yourpackage.name&gt; ls /data/data/&lt;com.yourpackage.name&gt;/files/SQLite
 </span></span></code></pre></div><p>You should see your database file. To get it into your file system, simply use <code>cat</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell run-as &lt;com.yourpackage.name&gt; cat /data/data/&lt;com.yourpackage.name&gt;/files/SQLite/&lt;database-name&gt; &gt; android-sqlite.db
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>adb shell run-as &lt;com.yourpackage.name&gt; cat /data/data/&lt;com.yourpackage.name&gt;/files/SQLite/&lt;database-name&gt; &gt; android-sqlite.db
 </span></span></code></pre></div><h3 id="android-studio">Android Studio</h3>
 <p>Launch Android Studio and open up any prject. Go to <code>View &gt; Tool Windows &gt; Device Explorer</code> and find your database file under <code>/data/data/&lt;com.yourpackage.name&gt;/files/SQLite/</code>.</p>
-<p><img src="device_explorer.png" alt="Android Device Explorer"></p>
+<p><img src="./device_explorer.png" alt="Android Device Explorer"></p>
 <p>And that&rsquo;s it, happy querying!</p>
-</article>
 
-
-    </div></body>
-
-    <script>
+        </section>
+        <div class="post-tags">
+          
+          
+          <nav class="nav tags">
+            <ul class="tags">
+              
+              <li><a href="/tags/expo">Expo</a></li>
+              
+              <li><a href="/tags/react-native">React Native</a></li>
+              
+              <li><a href="/tags/sqlite">SQLite</a></li>
+              
+            </ul>
+          </nav>
+          
+          
+        </div>
+      </div>
 
       
+      
+    </div>
 
-      try {
-          twemoji.parse(document.body, {
-            folder: "svg",
-            ext: ".svg",
-          });
-      } catch(e) {
-        if (e instanceof ReferenceError) {
-            console.log("Tweemoji not initialized")
-            console.log(e)
-        }
-      }
-    </script>
+    </article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/david-brt" rel="me" title="Github"><svg class="feather">
+   <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#github" />
+</svg></a><a class="border"></a></div>
+  <div class="footer-info">
+    2025  David Barth |   Built with <a
+      href="https://github.com/athul/archie">Archie</a> on <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+</div>
+    </body>
 </html>

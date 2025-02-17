@@ -2,18 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Expo on David Barth</title>
-    <link>http://localhost:1313/tags/expo/</link>
+    <link>https://davidbarth.dev/tags/expo/</link>
     <description>Recent content in Expo on David Barth</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <copyright>David Barth</copyright>
     <lastBuildDate>Sat, 17 Feb 2024 11:47:47 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/expo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://davidbarth.dev/tags/expo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Accessing your Expo-SQLite Database File on iOS and Android</title>
-      <link>http://localhost:1313/posts/expo-sqlite-database-access/</link>
+      <link>https://davidbarth.dev/posts/expo-sqlite-database-access/</link>
       <pubDate>Sat, 17 Feb 2024 11:47:47 +0200</pubDate>
-      <guid>http://localhost:1313/posts/expo-sqlite-database-access/</guid>
-      <description>&lt;h1 id=&#34;how-to-access-your-expo-sqlite-database-file&#34;&gt;How to access your Expo-SQLite database file&lt;/h1&gt;&#xA;&lt;p&gt;When interacting with an Expo-SQLite database, the first thing you need to do is to &lt;a href=&#34;https://docs.expo.dev/versions/latest/sdk/sqlite/#sqliteopendatabaseasyncdatabasename-options&#34;&gt;open a database connection&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#cba6f7&#34;&gt;const&lt;/span&gt; db &lt;span style=&#34;color:#89dceb;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#cba6f7&#34;&gt;await&lt;/span&gt; SQLite.openDatabaseAsync(&lt;span style=&#34;color:#a6e3a1&#34;&gt;&amp;#39;sqlite.db&amp;#39;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The string you pass as an an argument is the name of the database file.&lt;/p&gt;&#xA;&lt;p&gt;Here is how to locate and access that file on both iOS and Android.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;This assumes that you are using a development build of your app.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;ios&#34;&gt;iOS&lt;/h2&gt;&#xA;&lt;p&gt;iOS simulators store their data in a regular directory on on your mac.&#xA;Knowing the database name and the location of your simulators, it is now easy to find the actual database file:&lt;/p&gt;</description>
+      <guid>https://davidbarth.dev/posts/expo-sqlite-database-access/</guid>
+      <description>&lt;p&gt;When interacting with an Expo-SQLite database, the first thing you need to do is to &lt;a href=&#34;https://docs.expo.dev/versions/latest/sdk/sqlite/#sqliteopendatabaseasyncdatabasename-options&#34;&gt;open a database connection&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#7fbaf5&#34;&gt;const&lt;/span&gt; db &lt;span style=&#34;color:#bc74c4&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#7fbaf5&#34;&gt;await&lt;/span&gt; SQLite&lt;span style=&#34;color:#56b6c2&#34;&gt;.&lt;/span&gt;openDatabaseAsync&lt;span style=&#34;color:#56b6c2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#82cc6a&#34;&gt;&amp;#39;sqlite.db&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#56b6c2&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The string you pass as an an argument is the name of the database file.&lt;/p&gt;&#xA;&lt;p&gt;Here is how to locate and access that file on both iOS and Android.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;This assumes that you are using a development build of your app.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;ios&#34;&gt;iOS&lt;/h2&gt;&#xA;&lt;p&gt;iOS simulators store their data in a regular directory on on your mac.&#xA;Knowing the database name and the location of your simulators, it is now easy to find the actual database file:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

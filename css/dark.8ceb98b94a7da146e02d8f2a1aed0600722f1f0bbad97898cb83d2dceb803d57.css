@@ -1,0 +1,164 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    color: white;
+    background-color: #1a1b26;
+  }
+
+  ::-moz-selection {
+    background: blue;
+    color: #fff;
+    text-shadow: none;
+  }
+
+  ::selection {
+    background: var(--highlightColor);
+    color: #1a1b26;
+    text-shadow: none;
+  }
+
+  hr {
+    border-top: 3px dotted blue;
+  }
+  code {
+    background-color: lightblue;
+    color: black;
+    text-decoration: bold;
+    padding: 0.1em 0.2em;
+  }
+  pre {
+    background-color: #272822;
+    line-height: 1.4;
+    overflow-x: auto;
+    padding: 1em;
+  }
+  blockquote {
+    border-color: blue;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #ddd;
+  }
+  h1::before {
+    color: var(--darkMaincolor);
+    content: "# ";
+  }
+  h2::before {
+    color: var(--darkMaincolor);
+    content: "## ";
+  }
+  h3::before {
+    color: var(--darkMaincolor);
+    content: "### ";
+  }
+  h4::before {
+    color: var(--darkMaincolor);
+    content: "#### ";
+  }
+  h5::before {
+    color: var(--darkMaincolor);
+    content: "##### ";
+  }
+  h6::before {
+    color: var(--darkMaincolor);
+    content: "###### ";
+  }
+
+  .toc {
+    background-color: #272822;
+    color: white;
+  }
+
+  a {
+    border-bottom: 3px solid var(--darkMaincolor);
+    color: inherit;
+  }
+  a:hover {
+    background-color: var(--darkMaincolor);
+    color: black;
+  }
+
+  .site-description a {
+    color: #ddd;
+  }
+  .site-description a:hover {
+    color: black;
+  }
+
+  .tags a {
+    border-bottom: 3px solid var(--darkMaincolor);
+  }
+  .tags a:hover {
+    background-color: var(--darkMaincolor);
+    color: black;
+  }
+
+  .site-title a {
+    color: white;
+    text-decoration: none !important;
+  }
+
+  .header nav,
+  .footer {
+    border-color: #333;
+  }
+
+  .highlight {
+    background-color: #333;
+  }
+  .soc:hover {
+    color: black;
+  }
+  .draft-label {
+    color: var(--darkMaincolor);
+    background-color: blue;
+  }
+  .highlight pre code[class="language-javaScript"]::before,
+  .highlight pre code[class="language-js"]::before,
+  .highlight pre code[class*="language-yml"]::before,
+  .highlight pre code[class*="language-yaml"]::before,
+  .highlight pre code[class*="language-shell"]::before,
+  .highlight pre code[class*="language-bash"]::before,
+  .highlight pre code[class*="language-sh"]::before,
+  .highlight pre code[class*="language-json"]::before,
+  .highlight pre code[class*="language-python"]::before,
+  .highlight pre code[class*="language-py"]::before,
+  .highlight pre code[class*="language-css"]::before,
+  .highlight pre code[class*="language-go"]::before,
+  .highlight pre code[class*="language-md"]::before,
+  .highlight pre code[class*="language-md"]::before {
+    display: none;
+  }
+
+  .callout-alert {
+    color: #ffffff;
+    background-color: transparent;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #ff6347;
+  }
+
+  .callout-custom {
+    color: #ffffff;
+  }
+
+  .callout-tip {
+    color: #ffffff;
+    background-color: transparent;
+    border-width: 3px;
+    border-style: solid;
+    border-color: dodgerblue;
+  }
+
+  .callout-warning {
+    color: #ffffff;
+    background-color: transparent;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #ffd700;
+  }
+}

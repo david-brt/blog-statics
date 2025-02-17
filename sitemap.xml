@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/expo-sqlite-database-access/</loc>
+    <loc>https://davidbarth.dev/posts/expo-sqlite-database-access/</loc>
     <lastmod>2024-02-17T11:47:47+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://davidbarth.dev/categories/</loc>
     <lastmod>2024-02-17T11:47:47+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://davidbarth.dev/</loc>
     <lastmod>2024-02-17T11:47:47+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/expo/</loc>
+    <loc>https://davidbarth.dev/tags/expo/</loc>
     <lastmod>2024-02-17T11:47:47+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/mobile-development/</loc>
+    <loc>https://davidbarth.dev/categories/mobile-development/</loc>
     <lastmod>2024-02-17T11:47:47+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://davidbarth.dev/posts/</loc>
     <lastmod>2024-02-17T11:47:47+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/react-native/</loc>
+    <loc>https://davidbarth.dev/tags/react-native/</loc>
     <lastmod>2024-02-17T11:47:47+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sqlite/</loc>
+    <loc>https://davidbarth.dev/tags/sqlite/</loc>
     <lastmod>2024-02-17T11:47:47+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://davidbarth.dev/tags/</loc>
     <lastmod>2024-02-17T11:47:47+02:00</lastmod>
   </url>
 </urlset>
